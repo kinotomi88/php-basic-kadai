@@ -9,9 +9,9 @@
   <body>
     <p>
     <?php
-    $sample_data= ['name' => 'onion', 'price' => 200, 'weight' => 160];
+    $array= ['name' => 'onion', 'price' => 200, 'weight' => 160];
 
-    print_r($sample_data);
+    print_r($array);
 
     ?>
     </p>

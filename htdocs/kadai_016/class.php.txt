@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>課題16</title>  
+</head>
+
+<body>
+ <p>
+  <?php
+// Food クラス
+class Food {
+    public string $name;
+    public float $price;
+
+    public function __construct(string $name, float $price) {
+        $this->name = $name;
+        $this->price = $price;
+    }
+
+    public function show_price(): void {
+        echo "価格: {$this->price} 円<br>";
+    }
+}
+
+// Animal クラス
+class Animal {
+    public string $name;
+    public float $height;
+    public float $weight;
+
+    public function __construct(string $name, float $height, float $weight) {
+        $this->name = $name;
+        $this->height = $height;
+        $this->weight = $weight;
+    }
+
+    public function show_height(): void {
+        echo "身長: {$this->height} m<br>";
+    }
+}
+
+// インスタンス生成
+$apple = new Food("りんご", 150);
+$giraffe = new Animal("キリン", 5.2, 800);
+
+// 内容出力
+print_r($apple);
+echo "<br>";
+print_r($giraffe);
+echo "<br>";
+
+// メソッド実行
+$apple->show_price();
+$giraffe->show_height();
+?>  
+</p>
+
+</html>
